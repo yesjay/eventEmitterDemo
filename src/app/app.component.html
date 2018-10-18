@@ -1,0 +1,9 @@
+<fieldset>
+  <legend>
+    <h1>我是父親</h1>
+  </legend>
+  <input [(ngModel)]="strToChild">
+  <br> 我是兒子的時間 => <span style='color:red'> {{ strFormChild | date : 'yyyy-MM-dd hh:mm:ss'  }}{{strFormChild1}} </span>
+</fieldset>
+<detail [parentValue]="strToChild" (childEvent)="onListenChild($event);" (childSay)="onListenChild1($event)"></detail>
+<medium></medium>
